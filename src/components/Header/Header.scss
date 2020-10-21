@@ -1,0 +1,44 @@
+.nav {
+  position: fixed;
+
+  width: 100%;
+  padding: 30px 0;
+  transition: 1s;
+
+  &.scrolled-nav {
+    background-color: #f6f5f5;
+    padding: 20px 0;
+  }
+
+  &__max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 80px;
+  }
+
+  &__signature a {
+    color: #fff;
+
+    font-size: 25px;
+    font-weight: 500;
+
+    padding: 5px;
+  }
+
+  &__menu li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 25px;
+    transition: 1s;
+    a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+.scrolled {
+  color: #30cef6 !important;
+}
