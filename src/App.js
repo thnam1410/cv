@@ -15,7 +15,7 @@ function App() {
     <>
       <Header 
       positionY={scrollY > 30 ? true : false}
-      isInvisibleMenuIcon={width > 765 ? true : false} />
+      isInvisibleMenuIcon={width > 800 ? true : false} />
       <Home 
       downlineName={width<653?true:false}/>
       <About />
