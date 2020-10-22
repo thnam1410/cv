@@ -1,3 +1,5 @@
+@import "../../assets/images/styles/variables";
+
 .nav {
   position: fixed;
 
@@ -5,8 +7,9 @@
   padding: 30px 0;
   transition: 1s;
 
+  z-index: 99;
   &.scrolled-nav {
-    background-color: #f6f5f5;
+    background-color: $background-color;
     padding: 20px 0;
   }
 
@@ -19,7 +22,7 @@
   }
 
   &__signature a {
-    color: #fff;
+    color: $white-character;
 
     font-size: 25px;
     font-weight: 500;
@@ -32,13 +35,71 @@
     display: inline-block;
     margin-left: 25px;
     transition: 1s;
+    cursor: pointer;
     a {
-      color: #fff;
+      color: $white-character;
       font-size: 18px;
       font-weight: 500;
+      &:hover {
+        color: $blue-character;
+        transition: 1s;
+      }
     }
   }
 }
-.scrolled {
-  color: #30cef6 !important;
+.scrolled,
+.li-scrolled {
+  color: $blue-character !important;
+}
+
+@media (max-width: 765px) {
+  .nav__max-width {
+    padding: 0 30px;
+  }
+
+  .nav__menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+
+    height: 100vh;
+    width: 100%;
+
+    text-align: center;
+    padding-top: 50px;
+    background: #111;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    transition: 0.5s;
+
+    & li {
+      margin: 10px 0;
+      display: block;
+    }
+    & li a {
+      display: inline-block;
+    }
+  }
+  .active {
+    left: 0 !important;
+  }
+  .li-scrolled {
+    color: $white-character !important;
+  }
+}
+.btn-menu {
+  display: block;
+  z-index: 9999;
+
+  transition: 1s;
+  height: 28px;
+  width: 30px;
+}
+@media (max-width: 359px) {
+  .portfo {
+    display: none;
+  }
 }

@@ -412,3 +412,26 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 946px) {
+  .home__content {
+    font-size: 35px;
+  }
+}
+@media (max-width: 728px) {
+  .home__content {
+    text-align: left;
+    padding: 0;
+    & .job-describe {
+      font-size: 25px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .home__content {
+    display: block;
+    text-align: left;
+    & .job-describe {
+      font-size: 19px;
+    }
+  }
+}
