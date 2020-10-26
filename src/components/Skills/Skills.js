@@ -4,8 +4,11 @@ import "./Skills.scss";
 function Skills() {
   return (
     <section className="skills">
+      <div className="skills__header">
+        <span className="title">Skills</span>
+      </div>
       <div className="max-width">
-        <div className="skill-box1">
+        <div className="skill-box box1">
           <h2> Programming Languages</h2>
           <ul>
             <li>HTML,CSS-SCSS</li>
@@ -20,7 +23,7 @@ function Skills() {
           </ul>
         </div>
 
-        <div className="skill-box2">
+        <div className="skill-box box2">
           <h2> Database</h2>
           <ul>
             <li>MongoDB</li>
@@ -36,7 +39,7 @@ function Skills() {
             <li>Visual Studio Code</li>
           </ul>
         </div>
-        <div className="skill-box3">
+        <div className="skill-box box3">
           <h2> Foreign Language</h2>
           <ul>
             <li>...</li>

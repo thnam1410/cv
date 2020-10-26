@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import useScrollPosition from "@react-hook/window-scroll";
 import useWindowDimensions from "./components/useWindowDimensions/useWindowDimensions";
 import Skills from "./components/Skills/Skills";
+import Exp from "./components/Exp/Exp";
 
 function App() {
   const scrollY = useScrollPosition(60);
@@ -20,6 +21,7 @@ function App() {
       <Home downlineName={width < 653 ? true : false} />
       <About />
       <Skills />
+      <Exp />
     </>
   );
 }

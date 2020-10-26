@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import "./Header.scss";
 import classNames from "classnames";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-
-function Header({ positionY, isInvisibleMenuIcon
- }) {
+function Header({ positionY, isInvisibleMenuIcon }) {
   const [menuActive, setMenuActive] = useState(false);
 
   const handleOnClickMenu = () => {
-    setMenuActive(!menuActive)
-    positionY = !positionY
-  }
+    setMenuActive(!menuActive);
+    positionY = !positionY;
+  };
 
   return (
     <nav
@@ -26,7 +24,7 @@ function Header({ positionY, isInvisibleMenuIcon
             NamTruong <span className="portfo">Portfolio</span>
           </a>
         </div>
-        <ul className={classNames("nav__menu",{"active": menuActive})}>
+        <ul className={classNames("nav__menu", { active: menuActive })}>
           <li>
             <a className={classNames({ "li-scrolled": positionY })} href="/#">
               Home
@@ -48,21 +46,25 @@ function Header({ positionY, isInvisibleMenuIcon
             </a>
           </li>
         </ul>
-        {!isInvisibleMenuIcon ? 
-          (menuActive ? <FontAwesomeIcon
-                        className="btn-menu" 
-                        icon={faTimes} 
-                        size="2x" 
-                        color="white"
-                        onClick={handleOnClickMenu}/> 
-                      : (<FontAwesomeIcon 
-                        className="btn-menu" 
-                        icon={faBars} 
-                        size="2x" 
-                        color={ positionY ? "black" : "white"}
-                        onClick={handleOnClickMenu} />))
-        : null 
-        }
+        {!isInvisibleMenuIcon ? (
+          menuActive ? (
+            <FontAwesomeIcon
+              className="btn-menu"
+              icon={faTimes}
+              size="2x"
+              color="white"
+              onClick={handleOnClickMenu}
+            />
+          ) : (
+            <FontAwesomeIcon
+              className="btn-menu"
+              icon={faBars}
+              size="2x"
+              color={positionY ? "black" : "white"}
+              onClick={handleOnClickMenu}
+            />
+          )
+        ) : null}
       </div>
     </nav>
   );

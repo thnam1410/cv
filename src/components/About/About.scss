@@ -34,9 +34,10 @@
     .title::after {
       content: "who i am";
       position: absolute;
-      bottom: -17px;
+      bottom: -20px;
       left: 50%;
 
+      border-radius: 7px;
       font-size: 17px;
       padding: 2px 5px;
       color: $blue-character;
@@ -51,7 +52,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 35px auto;
+    padding-top: 35px;
+    padding-bottom: 35px;
 
     .left {
       border-radius: 10px;
@@ -63,6 +65,7 @@
       background-color: $white-background;
       border-radius: 10px;
       padding: 15px 20px;
+      margin-top: 25px;
       .title {
         text-align: center;
 

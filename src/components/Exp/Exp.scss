@@ -1,6 +1,6 @@
 @import "../../assets/images/styles/variables";
 
-.skills {
+.exp {
   width: 100%;
   background-color: $background-color;
   & .max-width {
@@ -8,29 +8,10 @@
     align-items: center;
     justify-content: space-around;
 
-    padding: 25px 15px;
+    padding-right: 15px;
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-
-    & .skill-box {
-      display: block;
-
-      background: $white-background;
-
-      border-radius: 10px;
-      font-size: 18px;
-      line-height: 45px;
-
-      height: 100%;
-      width: 33%;
-      max-width: 380px;
-
-      flex-wrap: wrap;
-      padding: 25px 45px;
-      h2 {
-        text-align: center;
-      }
-    }
   }
   &__header {
     width: 100%;
@@ -42,6 +23,7 @@
     background-color: #fff;
 
     padding: 15px 5px 25px;
+    margin-bottom: 20px;
 
     .title {
       position: relative;
@@ -53,16 +35,11 @@
       bottom: -7px;
       left: 50%;
 
-      width: 75px;
+      width: 180px;
       height: 3px;
 
       background: #111;
       transform: translateX(-50%);
     }
   }
-}
-.box1,
-.box2,
-.box3 {
-  margin-right: 20px;
 }
