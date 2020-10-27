@@ -60,7 +60,7 @@ function Header({ positionY, isInvisibleMenuIcon }) {
               className="btn-menu"
               icon={faBars}
               size="2x"
-              color={positionY ? "black" : "white"}
+              color={positionY ? "white" : "black"}
               onClick={handleOnClickMenu}
             />
           )

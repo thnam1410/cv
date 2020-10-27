@@ -7,6 +7,8 @@ import useScrollPosition from "@react-hook/window-scroll";
 import useWindowDimensions from "./components/useWindowDimensions/useWindowDimensions";
 import Skills from "./components/Skills/Skills";
 import Exp from "./components/Exp/Exp";
+import Contact from "./components/Contact/Contact";
+
 
 function App() {
   const scrollY = useScrollPosition(60);
@@ -22,6 +24,7 @@ function App() {
       <About />
       <Skills />
       <Exp />
+    <Contact/>
     </>
   );
 }

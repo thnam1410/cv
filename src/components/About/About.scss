@@ -9,14 +9,14 @@
 
     font-size: 40px;
     font-weight: 500;
-    box-shadow: $box-shadow-title;
-    background-color: #fff;
+    border-bottom: 1px solid $border-color;
+    background-color: $background-color;
 
     padding: 15px 5px 25px;
 
     .title {
       position: relative;
-      color: black;
+      color: white;
     }
 
     .title::before {
@@ -28,7 +28,7 @@
       width: 180px;
       height: 3px;
 
-      background: #111;
+      background: $border-color;
       transform: translateX(-50%);
     }
     .title::after {
@@ -52,17 +52,21 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
     padding-top: 35px;
     padding-bottom: 35px;
 
+    border-bottom: 1px solid $border-color;
+
     .left {
       border-radius: 10px;
-      background-color: $white-background;
+      background-color: $background-color;
       text-align: center;
     }
     .right {
       width: 700px;
-      background-color: $white-background;
+      background-color: $background-color;
+      color: $white-character;
       border-radius: 10px;
       padding: 15px 20px;
       margin-top: 25px;
@@ -92,4 +96,6 @@
 }
 .red-highlight {
   color: crimson;
+  font-weight: 600;
+  font-size: 26px;
 }

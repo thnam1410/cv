@@ -1,0 +1,117 @@
+@import "../../assets/images/styles/variables";
+
+.contact {
+  width: 100%;
+  background-color: $background-color;
+  &__banner {
+    position: relative;
+    font-size: 135px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: #272727;
+
+    .content {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      font-size: 55px;
+      z-index: 999;
+      color: $white-character;
+
+      & span {
+        color: pink;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0 100px;
+
+    & .left {
+      text-align: center;
+      flex: 0 1 50%;
+      padding: 20px;
+      color: $white-character;
+
+      p {
+        width: 380px;
+        margin: 0px auto;
+        padding: 10px 30px;
+        text-align: left;
+      }
+      border-right: 1px solid $border-color;
+    }
+    & .right {
+      flex: 1.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      & .mailbox {
+        display: flex;
+        padding: 5px 5px;
+        color: $white-character;
+        font-size: 18px;
+
+        & .mailbox-icon {
+          margin: 10px 10px 0 0;
+        }
+        & span {
+          color: pink;
+        }
+      }
+
+      h2 {
+        color: $white-character;
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      & .socials {
+        text-align: center;
+        width: 100%;
+        padding: 2px 0px;
+
+        &-icon {
+          margin-right: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  .contact__content {
+    flex-direction: column;
+
+    & .left {
+      border-right: none;
+      border-bottom: 1px solid $border-color;
+    }
+    & .right {
+      padding: 20px 0;
+    }
+  }
+}
+@media (max-width: 658px) {
+  .contact__banner {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .contact__content .left {
+    padding: 20px 0;
+    & p {
+      width: 100%;
+    }
+  }
+}

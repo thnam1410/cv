@@ -3,19 +3,23 @@
 .skills {
   width: 100%;
   background-color: $background-color;
+  border-bottom: 1px solid $border-color;
   & .max-width {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
 
     padding: 25px 15px;
     margin-right: auto;
     margin-left: auto;
 
+    transition: 1s;
+
     & .skill-box {
       display: block;
 
-      background: $white-background;
+      background: #23232354;
+      color: $white-character;
 
       border-radius: 10px;
       font-size: 18px;
@@ -25,7 +29,6 @@
       width: 33%;
       max-width: 380px;
 
-      flex-wrap: wrap;
       padding: 25px 45px;
       h2 {
         text-align: center;
@@ -38,14 +41,14 @@
 
     font-size: 40px;
     font-weight: 500;
-    box-shadow: $box-shadow-title;
-    background-color: #fff;
+    background-color: $background-color;
 
     padding: 15px 5px 25px;
+    border-bottom: 1px solid $border-color;
 
     .title {
       position: relative;
-      color: black;
+      color: $white-character;
     }
     .title::before {
       content: "";
@@ -56,13 +59,55 @@
       width: 75px;
       height: 3px;
 
-      background: #111;
+      background: $border-color;
       transform: translateX(-50%);
     }
   }
 }
-.box1,
-.box2,
-.box3 {
-  margin-right: 20px;
+
+@media (min-width: 1300px) {
+  .max-width {
+    padding: 25px 100px !important;
+  }
+}
+@media (max-width: 1302px) {
+  .skills {
+    & .max-width {
+      flex-direction: column;
+      transition: 1s ease-in-out;
+      align-items: center;
+      & .skill-box {
+        border-radius: 0px;
+        width: 500px;
+        h2 {
+          text-align: left;
+        }
+      }
+      & .box1 {
+        border-radius: 10px 10px 0px 0px;
+      }
+      & .box3 {
+        border-radius: 0px 0px 10px 10px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .skills .max-width .skill-box {
+    font-size: 15px;
+    h2 {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 380px) {
+  .skills {
+    & .max-width {
+      & .skill-box {
+        width: 100%;
+        margin: 0;
+        flex-wrap: wrap;
+      }
+    }
+  }
 }

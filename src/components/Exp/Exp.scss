@@ -3,15 +3,67 @@
 .exp {
   width: 100%;
   background-color: $background-color;
+  border-bottom: 1px solid $border-color;
   & .max-width {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 20px 15px;
     margin-right: auto;
     margin-left: auto;
+
+    .timeline-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      background-color: $background-color;
+
+      padding: 20px;
+      border-radius: 10px;
+      position: relative;
+      & .icon-box {
+        align-self: flex-start;
+
+        padding: 10px;
+        margin-right: 20px;
+
+        background-color: $box-color;
+
+        border-radius: 50%;
+      }
+      & .icon-box::before {
+        content: "";
+        position: absolute;
+        top: 75px;
+        left: 50px;
+        bottom: 0;
+        border-left: 1px solid #636363;
+      }
+      & .content {
+        font-size: 18px;
+
+        & .time {
+          background-color: $box-color;
+          color: $blue-character;
+          padding: 5px 10px;
+          border-radius: 5px;
+          width: fit-content;
+        }
+        & .subject {
+          margin: 10px 0;
+          color: $white-character;
+          .highlight-subject {
+            font-weight: 600;
+            font-size: 20px;
+          }
+        }
+        & .description {
+          color: $white-character;
+        }
+      }
+    }
   }
   &__header {
     width: 100%;
@@ -19,15 +71,15 @@
 
     font-size: 40px;
     font-weight: 500;
-    box-shadow: $box-shadow-title;
-    background-color: #fff;
+    background-color: $background-color;
 
     padding: 15px 5px 25px;
-    margin-bottom: 20px;
+
+    border-bottom: 1px solid $border-color;
 
     .title {
       position: relative;
-      color: black;
+      color: $white-character;
     }
     .title::before {
       content: "";
@@ -35,11 +87,16 @@
       bottom: -7px;
       left: 50%;
 
-      width: 180px;
+      width: 350px;
       height: 3px;
 
-      background: #111;
+      background: $border-color;
       transform: translateX(-50%);
     }
+  }
+}
+@media (max-width: 330px) {
+  .title::before {
+    display: none;
   }
 }
