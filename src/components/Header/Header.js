@@ -24,7 +24,7 @@ function Header({ positionY, isInvisibleMenuIcon }) {
       <div className="nav__max-width">
         <div className="nav__signature">
 
-            <a className={classNames({ scrolled: positionY })} href="/#" onClick={toggleHome}>
+            <a className={classNames({ scrolled: positionY })} onClick={toggleHome}>
               NamTruong <span className="portfo">Portfolio</span>
             </a>
         </div>
