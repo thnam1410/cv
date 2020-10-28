@@ -5,6 +5,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 function Contact() {
+
   return (
     <section className="contact" >
         <div className="contact__banner">
@@ -35,31 +36,37 @@ function Contact() {
                 </div>
                 <h2>Let's get social</h2>
                 <div className="socials">
+                    <a href="https://www.facebook.com/thnam1410" target="blank">
                     <FontAwesomeIcon
-                    
                         className="socials-icon"
                         icon={faFacebook}
                         size="2x"
                         color="white"
                     />
+                    </a>
                     <FontAwesomeIcon
                         className="socials-icon"
                         icon={faTwitter}
                         size="2x"
                         color="white"
                     />
+                    <a href="https://github.com/thnam1410" target="blank">
                     <FontAwesomeIcon
+
                         className="socials-icon"
                         icon={faGithub}
                         size="2x"
                         color="white"
-                    />
+                        />
+                    </a>
+                    <a href="https://www.instagram.com/namtrg_/" target="blank">
                     <FontAwesomeIcon
                         className="socials-icon"
                         icon={faInstagram}
                         size="2x"
                         color="white"
                     />
+                    </a>
                 </div>
             </div>
         </div>

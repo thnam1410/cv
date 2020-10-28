@@ -30,32 +30,24 @@ function Header({ positionY, isInvisibleMenuIcon }) {
         </div>
         <ul className={classNames("nav__menu", { active: menuActive })}>
           <li>
-            <a className={classNames({ "li-scrolled": positionY })} href="/#">
-            <Link activeClass="active" to="home" spy={true} smooth={true} offset={50}  duration={500}>
+            <Link className={classNames({ "li-scrolled": positionY })} activeClass="active" to="home" spy={true} smooth={true} offset={50}  duration={500}>
               Home
             </Link>  
-            </a>
           </li>
           <li>
-            <a className={classNames({ "li-scrolled": positionY })} href="/#">
-            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-80} duration={500}>
+            <Link className={classNames({ "li-scrolled": positionY })} activeClass="active" to="about" spy={true} smooth={true} offset={-80} duration={500}>
               About
             </Link> 
-            </a>
           </li>
           <li>
-            <a className={classNames({ "li-scrolled": positionY })} href="/#">
-            <Link activeClass="active" to="skills" spy={true} smooth={true} offset={-80}  duration={500}>
+            <Link className={classNames({ "li-scrolled": positionY })} activeClass="active" to="skills" spy={true} smooth={true} offset={-80}  duration={500}>
               Work
             </Link> 
-            </a>
           </li>
           <li>
-            <a className={classNames({ "li-scrolled": positionY })} href="/#">
-            <Link activeClass="active" to="contact" spy={true} smooth={true}  offset={100}  duration={500}>
+            <Link className={classNames({ "li-scrolled": positionY })} activeClass="active" to="contact" spy={true} smooth={true}  offset={100}  duration={500}>
               Contact
             </Link> 
-            </a>
           </li>
         </ul>
         {!isInvisibleMenuIcon ? (

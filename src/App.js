@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -13,8 +13,15 @@ import Contact from "./components/Contact/Contact";
 function App() {
   const scrollY = useScrollPosition(60);
   const { width } = useWindowDimensions();
-
-  console.log(scrollY)
+  useEffect(() => {
+    window.addEventListener('focus', onFocus);
+    window.addEventListener('blur', onBlur);
+    // Specify how to clean up after this effect:
+    return () => {
+      window.removeEventListener('focus', onFocus);
+      window.removeEventListener('blur', onBlur);
+    };
+  });
   return (
     <>
       <Header
@@ -29,5 +36,13 @@ function App() {
     </>
   );
 }
+const onFocus = () => {
+  document.title = "Nam Truong"
+};
+
+// User has switched away from the tab (AKA tab is hidden)
+const onBlur = () => {
+  document.title = "Come Back To Me !!"
+};
 
 export default App;
