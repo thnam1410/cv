@@ -6,7 +6,7 @@ import { faFacebook, faGithub, faInstagram, faTwitter } from "@fortawesome/free-
 
 function Contact() {
   return (
-    <section className="contact">
+    <section className="contact" >
         <div className="contact__banner">
             Contact
                 <div className="content">
@@ -36,6 +36,7 @@ function Contact() {
                 <h2>Let's get social</h2>
                 <div className="socials">
                     <FontAwesomeIcon
+                    
                         className="socials-icon"
                         icon={faFacebook}
                         size="2x"

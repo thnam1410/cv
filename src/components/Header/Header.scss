@@ -10,7 +10,7 @@
   z-index: 99;
   &.scrolled-nav {
     background-color: $background-color;
-    padding: 20px 0;
+    padding: 10px 0;
   }
 
   &__max-width {
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 30px 80px;
+    padding: 20px 80px;
   }
 
   &__signature a {
@@ -34,7 +34,7 @@
   &__menu li {
     list-style: none;
     display: inline-block;
-    margin-left: 25px;
+    margin-right: 25px;
     transition: 1s;
     cursor: pointer;
     a {
@@ -108,4 +108,7 @@
   .nav__max-width {
     padding: 10px 30px;
   }
+}
+.active {
+  color: $blue-character !important;
 }

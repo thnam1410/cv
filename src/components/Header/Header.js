@@ -3,6 +3,7 @@ import "./Header.scss";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { animateScroll as scroll, Link } from "react-scroll";
 
 function Header({ positionY, isInvisibleMenuIcon }) {
   const [menuActive, setMenuActive] = useState(false);
@@ -11,7 +12,9 @@ function Header({ positionY, isInvisibleMenuIcon }) {
     setMenuActive(!menuActive);
     positionY = !positionY;
   };
-
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  }
   return (
     <nav
       className={classNames("nav", {
@@ -20,29 +23,38 @@ function Header({ positionY, isInvisibleMenuIcon }) {
     >
       <div className="nav__max-width">
         <div className="nav__signature">
-          <a className={classNames({ scrolled: positionY })} href="/#">
-            NamTruong <span className="portfo">Portfolio</span>
-          </a>
+
+            <a className={classNames({ scrolled: positionY })} href="/#" onClick={toggleHome}>
+              NamTruong <span className="portfo">Portfolio</span>
+            </a>
         </div>
         <ul className={classNames("nav__menu", { active: menuActive })}>
           <li>
             <a className={classNames({ "li-scrolled": positionY })} href="/#">
+            <Link activeClass="active" to="home" spy={true} smooth={true} offset={50}  duration={500}>
               Home
+            </Link>  
             </a>
           </li>
           <li>
             <a className={classNames({ "li-scrolled": positionY })} href="/#">
+            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-80} duration={500}>
               About
+            </Link> 
             </a>
           </li>
           <li>
             <a className={classNames({ "li-scrolled": positionY })} href="/#">
+            <Link activeClass="active" to="skills" spy={true} smooth={true} offset={-80}  duration={500}>
               Work
+            </Link> 
             </a>
           </li>
           <li>
             <a className={classNames({ "li-scrolled": positionY })} href="/#">
+            <Link activeClass="active" to="contact" spy={true} smooth={true}  offset={100}  duration={500}>
               Contact
+            </Link> 
             </a>
           </li>
         </ul>

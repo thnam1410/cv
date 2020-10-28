@@ -14,17 +14,18 @@ function App() {
   const scrollY = useScrollPosition(60);
   const { width } = useWindowDimensions();
 
+  console.log(scrollY)
   return (
     <>
       <Header
         positionY={scrollY > 30 ? true : false}
         isInvisibleMenuIcon={width > 800 ? true : false}
       />
-      <Home downlineName={width < 653 ? true : false} />
-      <About />
-      <Skills />
+      <Home id="home" downlineName={width < 653 ? true : false} />
+      <About id="about" />
+      <Skills id="skills" />
       <Exp />
-    <Contact/>
+      <Contact id="contact"/>
     </>
   );
 }
